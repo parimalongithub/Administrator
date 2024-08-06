@@ -1,12 +1,16 @@
 package com.example.admistrator.Repository;
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.admistrator.data.support_data;
+import com.example.admistrator.data.SupportData;
 
 
 @Repository
-public interface repository extends CrudRepository<support_data,Long> {
+public interface repository extends MongoRepository<SupportData,String> {
+    List<SupportData> findBydepartment(String department);
+
 
 }
 

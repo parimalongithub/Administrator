@@ -4,10 +4,11 @@
     <title>Product Department</title>
 </head>
 <body>
-    <h1>Technical</h1>
+    <h1>Product Department</h1>
     <table>
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Date</th>
@@ -16,6 +17,7 @@
         </thead>
         <tbody>
             <tr th:each="entity : ${entities}">
+                <td th:text="${entity.id}"></td>
                 <td th:text="${entity.name}"></td>
                 <td th:text="${entity.email}"></td>
                 <td th:text="${entity.date}"></td>
