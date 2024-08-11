@@ -4,14 +4,17 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.admistrator.data.SupportData;
+import com.example.admistrator.Entity.SupportData;
+
 
 
 @Repository
-public interface repository extends MongoRepository<SupportData,String> {
+public interface SupportDatarepository extends MongoRepository<SupportData,String> {
     List<SupportData> findBydepartment(String department);
 
 
 }
+
+
 
 
