@@ -1,0 +1,72 @@
+project:
+  xmlns: "http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi: "http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation: "http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+  modelVersion: "4.0.0"
+  parent:
+    groupId: "org.springframework.boot"
+    artifactId: "spring-boot-starter-parent"
+    version: "2.7.18"
+    relativePath: ""
+  groupId: "com.example"
+  artifactId: "admistrator"
+  version: "0.0.1-SNAPSHOT"
+  name: "admistrator"
+  description: "Demo project for Spring Boot"
+  url: ""
+  licenses:
+    - license: {}
+  developers:
+    - developer: {}
+  scm:
+    connection: ""
+    developerConnection: ""
+    tag: ""
+    url: ""
+  properties:
+    java.version: "17"
+  dependencies:
+    - groupId: "org.springframework.boot"
+      artifactId: "spring-boot-starter-web"
+    - groupId: "org.springframework.boot"
+      artifactId: "spring-boot-starter-thymeleaf"
+      version: "2.7.18"
+    - groupId: "org.springframework.boot"
+      artifactId: "spring-boot-starter-test"
+      scope: "test"
+    - groupId: "org.springframework.boot"
+      artifactId: "spring-boot-devtools"
+      scope: "runtime"
+      optional: true
+    - groupId: "org.projectlombok"
+      artifactId: "lombok"
+      scope: "provided"
+    - groupId: "org.springframework.boot"
+      artifactId: "spring-boot-starter-data-mongodb"
+      version: "3.3.2"
+  build:
+    plugins:
+      - groupId: "org.springframework.boot"
+        artifactId: "spring-boot-maven-plugin"
+  repositories:
+    - id: "spring-milestones"
+      name: "Spring Milestones"
+      url: "https://repo.spring.io/milestone"
+      snapshots:
+        enabled: false
+    - id: "spring-snapshots"
+      name: "Spring Snapshots"
+      url: "https://repo.spring.io/snapshot"
+      releases:
+        enabled: false
+  pluginRepositories:
+    - id: "spring-milestones"
+      name: "Spring Milestones"
+      url: "https://repo.spring.io/milestone"
+      snapshots:
+        enabled: false
+    - id: "spring-snapshots"
+      name: "Spring Snapshots"
+      url: "https://repo.spring.io/snapshot"
+      releases:
+        enabled: false
