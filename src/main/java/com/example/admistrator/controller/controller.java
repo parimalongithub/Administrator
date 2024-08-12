@@ -15,6 +15,8 @@ import com.example.admistrator.Service.getdata;
 
 
 @RestController
+@CrossOrigin(origins = "https://6a97e303-6c9f-4dbc-8fd9-caf7e8d8e50c.e1-us-east-azure.choreoapps.dev")
+
 public class controller {
     @Autowired
     public
@@ -22,7 +24,6 @@ public class controller {
     getdata service;
 
   
-    @CrossOrigin(origins="http://localhost:3000")
     @GetMapping("/Technical")
     public ResponseEntity<List<SupportData>> getTechsupportqueries(
     @RequestParam(value = "Technical", required = false, defaultValue = "Technical") String Technical) {
@@ -32,7 +33,6 @@ public class controller {
 
 
 
-    @CrossOrigin(origins="http://localhost:3000")
     @GetMapping("/Customerservice")
     public ResponseEntity<List<SupportData>> getCustomersupportqueries(
     @RequestParam(value = "Customer Service", required = false, defaultValue = "Customer Service") String CustomerService) {
@@ -41,7 +41,6 @@ public class controller {
     } 
 
     
-    @CrossOrigin(origins="http://localhost:3000")
     @GetMapping("/Hr")
     public ResponseEntity<List<SupportData>> getDocumantationqueries(
         @RequestParam(value = "Hr", required = false, defaultValue = "Hr") String Hr) {
@@ -49,7 +48,6 @@ public class controller {
     return ResponseEntity.ok(entity);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/miscellaneous")
         public ResponseEntity<List<SupportData>> getMiscellaneousqueries(
                 @RequestParam(value = "miscellaneous", required = false, defaultValue = "miscellaneous") String miscellaneous) {
@@ -57,7 +55,6 @@ public class controller {
             return ResponseEntity.ok(entity);
         }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/Summery/{year}")
     public ResponseEntity<List<Summerizer>> getsummery(@PathVariable Integer year){
         List<Summerizer> entity = service.getsummery(year);
