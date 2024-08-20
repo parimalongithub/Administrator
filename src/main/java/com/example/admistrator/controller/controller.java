@@ -16,12 +16,9 @@ import com.example.admistrator.Service.getdata;
 
 @RestController
 @CrossOrigin(origins = "https://a20bc5a2-464c-419d-b62a-220026a7dfb9.e1-us-east-azure.choreoapps.dev")
-
 public class controller {
     @Autowired
-    public
-    
-    getdata service;
+    public  getdata service;
 
   
     @GetMapping("/Technical")
@@ -62,10 +59,21 @@ public class controller {
 
     
     }
+    @GetMapping("/statistics/sentiment")
+    public  getdata.SentimentStatistics getSentimentStatistics() {
+        return service.getSentimentStatistics();
+    }
+
+    @GetMapping("/statistics/departmentcount")
+        public getdata.departmentcountt getHrDepartmentCount(){
+            return service.departmentcount();
+        }
+    }
+
 
 
         
-}
+
 
 
 
