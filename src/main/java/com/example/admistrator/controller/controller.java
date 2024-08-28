@@ -15,7 +15,7 @@ import com.example.admistrator.Service.getdata;
 
 
 @RestController
-@CrossOrigin(origins = "https://a20bc5a2-464c-419d-b62a-220026a7dfb9.e1-us-east-azure.choreoapps.dev")
+@CrossOrigin(origins = "https://admin-echo.choreoapps.dev/")
 public class controller {
     @Autowired
     public  getdata service;
