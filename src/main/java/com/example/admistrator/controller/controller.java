@@ -40,7 +40,7 @@ public class controller {
     
     @GetMapping("/Hr")
     public ResponseEntity<List<SupportData>> getDocumantationqueries(
-        @RequestParam(value = "Hr", required = false, defaultValue = "Hr") String Hr) {
+        @RequestParam(value = "HR", required = false, defaultValue = "HR") String Hr) {
     List<SupportData> entity = service.getEntitiesByDepartment(Hr);
     return ResponseEntity.ok(entity);
     }
