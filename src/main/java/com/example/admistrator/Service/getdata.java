@@ -104,7 +104,7 @@ public class getdata {
         return supportDatarepository.countByDepartment("Technical");
     }
     public int getHRdepartmentCount(){
-        return supportDatarepository.countByDepartment("Hr");
+        return supportDatarepository.countByDepartment("HR");
     }
     public int getCustomerServicedepartmentCount(){
         return supportDatarepository.countByDepartment("Customer Service");
