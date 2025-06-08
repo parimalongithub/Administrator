@@ -47,7 +47,7 @@ public class controller {
 
     @GetMapping("/miscellaneous")
         public ResponseEntity<List<SupportData>> getMiscellaneousqueries(
-                @RequestParam(value = "miscellaneous", required = false, defaultValue = "miscellaneous") String miscellaneous) {
+                @RequestParam(value = "Miscellaneous", required = false, defaultValue = "Miscellaneous") String miscellaneous) {
             List<SupportData> entity = service.getEntitiesByDepartment(miscellaneous);
             return ResponseEntity.ok(entity);
         }
